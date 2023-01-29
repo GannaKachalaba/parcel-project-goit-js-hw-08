@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-// Add imports above this line
+
 
 import { galleryItems } from './gallery-items';
 
@@ -29,4 +29,3 @@ new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionsDelay: 250,
 });
-
