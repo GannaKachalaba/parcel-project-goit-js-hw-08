@@ -8,6 +8,9 @@ const refs = {
   message: document.querySelector('textarea'),
 };
 
+noteForm();
+
+
 
 const formData = {};
 
@@ -34,13 +37,13 @@ function noteForm() {
   const data = localStorage.getItem(STORAGE_KEY);
   const savedData = JSON.parse(data);
 
-  if (savedData.email) {
-    refs.email.value = savedData.email;
+  if (savedData) {
+    savedData.email
+      ? (refs.email.value = savedData.email)
+      : (refs.email.value = '');
+    savedData.message
+      ? (refs.message.value = savedData.message)
+      : (refs.message.value = '');
   }
-
-   if (savedData.message) {
-     refs.message.value = savedData.message;
-   }
 };
 
-noteForm();
